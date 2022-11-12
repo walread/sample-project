@@ -1,20 +1,7 @@
-import random
-import sys
+n = int(input("Number: "))
 
-x = sys.argv[1]
-y = sys.argv[2]
+di = {}
+for i in range(1, n+1):
+    di[i] = i*i
 
-answer = random.randint(int(x), int(y))
-print(answer)
-
-while True:
-    try:
-        guess = int(input("Guess a number between 1 and 10: "))
-        if guess == answer:
-            print("Correct")
-            break
-        else:
-            print("Incorrect")
-    except ValueError:
-        print("Please enter a number")
-        continue
+print(di)
